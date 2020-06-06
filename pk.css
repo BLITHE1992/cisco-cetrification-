@@ -1,0 +1,323 @@
+@import url(https://fonts.googleapis.com/css?family=Anaheim);
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  
+}
+
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+body{
+	min-height: 100%;
+  background:url("online-shopping.jpg");
+  opacity:-10rem;
+  background-repeat:no-repeat;
+  background-size: cover;
+  overflow:auto;
+}
+.container{
+	margin: 4% auto;
+	width: 210px;
+	height: 140px;
+	position: relative;
+	perspective: 1000px;
+}
+#carousel{
+	width: 100%;
+	height: 100%;
+	position:absolute;
+	transform-style: preserve-3d;
+	animation: rotation 20s infinite linear;
+}
+#carousel:hover{
+	animation-play-state: paused;
+}
+#carousel figure{
+	display: block;
+	position: absolute;
+	width: 186px;
+	height: 116px;
+	left: 10px;
+	top: 10px;
+  overflow: hidden;
+  isolation:isolate;
+	border: solid 2px rgb(226, 224, 224);
+}
+#carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
+#carousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(288px);}
+#carousel figure:nth-child(3) { transform: rotateY(80deg) translateZ(288px);}
+#carousel figure:nth-child(4) { transform: rotateY(120deg) translateZ(288px);}
+#carousel figure:nth-child(5) { transform: rotateY(160deg) translateZ(288px);}
+#carousel figure:nth-child(6) { transform: rotateY(200deg) translateZ(288px);}
+#carousel figure:nth-child(7) { transform: rotateY(240deg) translateZ(288px);}
+#carousel figure:nth-child(8) { transform: rotateY(280deg) translateZ(288px);}
+#carousel figure:nth-child(9) { transform: rotateY(320deg) translateZ(288px);}
+
+img{
+	/*cursor:*/
+	transition: all .5s ease;
+}
+img:hover{
+   transform: scale(3.5,1.5);
+   cursor:url("bags-clipart-10.jpg"), auto;
+}
+@keyframes rotation{
+	from{
+		transform: rotateY(0deg);
+	}
+	to{
+		transform: rotateY(360deg);
+	}
+}
+  main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 300px;
+    padding-right:10px;
+  }
+  .page .header{
+    text-align: center;
+  }
+  .page .header .logo, 
+  .page .header p, 
+  .page .header button{
+    margin-bottom: 15px;
+  }
+  .page .header > p{
+    font-weight: bold;
+    color: #8e8e8e;
+    font-size: 18px;
+  }
+  
+  .page .header > button{
+    width: inherit;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background:url("online-shopping.jpg");
+    color: #ffffff;
+  }
+  
+  .page .header div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #8e8e8e;
+  }
+  
+  .page .header div p{
+    padding: 0 20px;  
+  }
+  
+  .page .header div hr{
+    width: 200px;
+    
+  }
+  .page .container{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .page .container form, input{
+    width: inherit;
+  }
+  
+  .page .container form input{
+    border: 1px solid #dbdbdb;
+    background-color: #fafafa;
+    padding: 10px 5px;
+    margin: 10px 0;
+  }
+  
+  .page .container form input:last-of-type{
+    margin-bottom: 10px;  
+  }
+  
+  .page .container form button{
+    width: inherit;
+    margin-bottom: 20px;
+    padding: 7px 20px;
+    border-radius: 5px;
+    border: none;
+    background:url("online-shopping.jpg");
+    color: #ffffff;
+  }
+  
+  .page .container ul{
+    list-style: none;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .page .container ul li{
+    display: inline;
+    color:whitesmoke;
+  }
+  
+  .page .container ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+  }
+  
+  /* option style */
+  .option p > a{
+      margin-bottom:20px;
+      text-decoration: none;
+      color: #00a0f7;
+  }
+  
+  /* otherapps style */
+  .otherapps{
+    text-align: center;
+  }
+  
+  .otherapps p{
+    margin-bottom: 10px;
+  }
+  
+  .otherapps > button{
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+  }
+  
+  /* footer style */
+  .footer{
+    margin-top: 0px;
+    background-color:black;
+  }
+  
+  .footer ul{
+    text-align: center;
+    margin-bottom:20px;
+    
+  }
+  .footer ul li{
+    display: inline;
+    margin-right: 5px;
+
+  }
+  .footer ul li a{
+    text-decoration: none;
+    font-size: 20px; 
+    color: whitesmoke;
+    font-weight: bold;
+    
+  }
+  
+  .footer p{
+    margin: 10px 0;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+  }
+  
+  
+  
+  /* Mobile Styles */
+  
+  @media only screen and (max-width: 400px) {
+      body {
+          font-family: Freight Sans
+      }
+    
+    .page{
+      width: 250px;
+      background-color: #fafafa;
+    }
+    
+    .page .header{
+      width: inherit;
+      margin-top: 10px;
+    }
+    
+    .page .container{
+      width: inherit;
+    }
+    
+    .option{
+      margin: 80px 0;
+    }
+    
+    .page .container input{
+      padding: 10px 5px;
+      margin: 5px 0;
+    }
+    
+    .page .footer{
+      width: inherith
+    }
+  }
+  
+  @media only screen and (min-width: 401px){
+      body {
+          font-family: Neue Helvetica
+      }
+    .page{
+      border: 1px solid #dbdbdb;
+      width: 350px;
+      background-color: white;
+      margin: 40px 40px 10px 40px;
+    }
+    
+    .page .header{
+      width: 270px;
+      margin-top: 15px;
+    }
+    
+    .page .container{
+      width: 270px;
+    }
+    
+    .option{
+      border: 1px solid #dbdbdb;
+      background-color: white;
+      width: 350px;
+      height: 70px;
+      margin-top: 20px 0;
+      display: flex; 
+      align-items: center;
+      justify-content: center;
+      
+    }
+    
+    .otherapps{
+      margin: 20px 0;
+    }
+    
+    .otherapps button{
+      margin-right: 5px;
+    }
+    
+    .otherapps button:after-of-type{
+      margin-right: none;
+    }
+    
+    .page .footer{
+      width: 100%;
+    }
+  }
+}
+
+
+}
+ #Card image cap{
+  margin-left
+}
